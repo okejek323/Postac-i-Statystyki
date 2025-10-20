@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Postać_i_Statystyki
 {
-    internal class Bohater
+        internal class Bohater
     {
         public string imie;
         public string klasa;
@@ -31,6 +31,28 @@ namespace Postać_i_Statystyki
         public void Osoba(string imie, string klasa)
         {
             Console.WriteLine($"{imie} - {klasa} \n Zdrowie - {zdrowie} \n Mana - {mana} \n");
+        }
+
+        public virtual void Atakuj(Bohater cel) 
+        {
+            cel.setZdrowie(10);
+        }
+
+        public class Wojownik : Bohater
+        {
+            public override void Atakuj(Bohater cel)
+            {
+                cel.setZdrowie(15);
+            }
+        }
+
+        public class Czarodziej : Bohater
+        {
+            public override void Atakuj(Bohater cel)
+            {
+                cel.setZdrowie(25);
+                mana -= 5;
+            }
         }
     }
 }
