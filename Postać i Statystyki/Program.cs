@@ -1,23 +1,35 @@
-﻿using Postać_i_Statystyki;
+using Postać_i_Statystyki;
 
-Bohater Bohater_A = new Bohater.Wojownik();
-Bohater Bohater_B = new Bohater.Czarodziej();
 
-Potwór Potwór_A = new Potwór.Ork();
-Potwór Potwór_B = new Potwór.Goblin();
+//Bohater Bohater_A = new Bohater.Wojownik();
+//Bohater Bohater_B = new Bohater.Czarodziej();
 
-Bohater_B.Atakuj(Bohater_A);
-Bohater_A.Atakuj(Bohater_B);
+//Potwór Potwór_A = new Potwór.Ork();
+//Potwór Potwór_B = new Potwór.Goblin();
 
-Bohater_A.Osoba("Tomek", "Wojownik");
-Bohater_B.Osoba("Michał", "Mag");
+//Bohater_B.Atakuj(Bohater_A);
+//Bohater_A.Atakuj(Bohater_B);
 
-List<Potwór> Potwory = new List<Potwór>();
+//Bohater_A.Osoba("Tomek", "Wojownik");
+//Bohater_B.Osoba("Michał", "Mag");
 
-Potwory.Add(new Potwór.Ork());
-Potwory.Add(new Potwór.Goblin());
+//List<Potwór> Potwory = new List<Potwór>();
 
-foreach(var potwór in Potwory)
-{
-    potwór.wydajDzwiek();
-}
+//Potwory.Add(new Potwór.Ork());
+//Potwory.Add(new Potwór.Goblin());
+
+//foreach (var potwór in Potwory)
+//{
+//    potwór.wydajDzwiek();
+//}
+
+Kaplan Miguel = new Kaplan();
+Miguel.mana = 50;
+
+Miguel.rzucCzar("Kula ognia");
+Console.WriteLine("----------------------------");
+Miguel.rzucCzar("Błyskawica");
+Console.WriteLine("----------------------------");
+Miguel.rzucCzar("Rock");
+Console.WriteLine("----------------------------");
+Miguel.regenerujMana(25);
